@@ -147,7 +147,7 @@ class AnsiFormatter:
         return True
 
     def __str__(self):
-        return self.get()
+        return "".join(self._str_fragments)
 
     def get(self, get_also_empty_code = False):
         if get_also_empty_code == False and len(self._params) == 0:
@@ -244,6 +244,3 @@ class AnsiFormatter:
         print("".join(self._str_fragments))
         self.clear()
         return self
-
-
-

@@ -32,6 +32,17 @@ def ansiDemoFormatter():
     af.text("iH")
     af.echo()
 
+    af.background().green()
+    af.color().yellow()
+    af.text("1")
+    af.background().red()
+    af.color().yellow()
+    af.text("2")
+    print str(af)
+    print "X" + str(af) + "Y"
+    af.echo() # print and reset
+    af.echo() # empty - new line
+
 
 if __name__ == "__main__":
     ansiDemoFormatter()
